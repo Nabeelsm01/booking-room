@@ -1,0 +1,266 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+        }
+    body{
+        background: linear-gradient(158deg, rgba(184,201,245,0.5) 0%, rgba(181,232,248,0.5) 100%);
+        overflow: auto;   
+        
+    }
+
+    nav{
+        padding: 0;
+        display: flex;
+        height: 60px;
+        width: 100%;
+        background: #fff;
+        /* overflow:hidden; */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
+        align-items: center;
+        position: relative;
+        
+    }
+
+    .innav{
+        max-width: 1450px;
+        display: flex;
+        align-items: center;
+        /* border: 2px solid red; */
+        justify-content: space-between; /* ปรับการจัดตำแหน่งของอิลิเมนต์ภายใน .innav */
+        margin: 0 auto;
+        
+
+    }
+
+   
+    .li-flex{
+        display: flex;
+        margin: 40vw;
+        margin-right: auto;
+        
+
+    }
+    li{
+        margin-right: 2rem;
+        font-size: 18px;
+        font-family: sans-serif;
+        list-style-type: none;
+        font-weight:normal;
+        /* position: relative; */
+    }
+     li:hover {
+        background-color: #d7e2ff;
+        opacity: 100%;
+        transition: 0.3s;
+    } 
+    a{
+        text-decoration: none;
+        color:#7888B2;
+        display: inline-block;
+        height: 100%;
+        width: 100px;
+        text-align: center; 
+        padding: 20px 0;/* ปรับ padding เพื่อจัดข้อความให้อยู่กลางในแนวตั้ง */
+    
+    }
+    a :hover{
+        text-decoration: none;
+        color:#bed3ff; 
+        /* background-color: #4d5567;
+        opacity: 10%; */
+        
+    }
+    .logosss{
+            width:200px; 
+            height:0 auto; 
+            margin: 1px;
+            align-items: center;
+            padding-top: 10px;
+            
+    }
+    img:hover {
+        filter: grayscale(80%);
+    }
+
+    .circleprofile{
+        margin: auto;
+        width: 40px; /* หรือขนาดที่ต้องการ */
+        height: 40px; /* หรือขนาดที่ต้องการ */
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #bed3ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .profileimg{
+        width: 95%; /* ปรับให้รูปภาพเต็มพื้นที่ของวงกลม */
+        height: 95%; /* ปรับให้รูปภาพปรับตามสัดส่วน */
+        border-radius: 50%;
+        object-fit: cover;         
+    }
+    /*----------------------- dropdown list for menu -------------------*/
+    .dropdown{
+        position: absolute;
+        display:block;
+        background-color: #fff;
+        border-radius: 4px;
+        top: 110%;
+        width: 140px;
+        height: 218px;
+        padding-left: 5px;
+        right: 100px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.05);
+
+    }
+    .dropdown li{
+        width: 140px;
+        margin-top: 0.2rem;
+        padding: 2px 5px 5px 5px;
+        
+        
+    }
+    .dropdown li:hover{
+        background-color: #c5d4fa;
+        position: relative;
+        border-radius: 4px;
+        
+    }
+    .dropdown-link:hover .dropdown{
+        top: 105%;
+        opacity: 1;
+        visibility: visible;
+        padding: 0;
+    }
+    /*--------------- dropdown list for profile -----------------------------*/
+    .profiledropd{
+        position: absolute;
+        display:block;
+        background-color: #fff;
+        border-radius: 6px;
+        top: 110%;
+        width: 200px;
+        height: 505px;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.05);
+    }
+    .profiledropd li{
+        width: 200px;
+        margin-top: 0.2rem;
+        padding: 2px 5px 5px 5px;
+        justify-content: center;
+    }
+    .circleprofile:hover .profiledropd {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s;
+        top: 105%;
+    }
+    
+    .profiledropd .profileimg{
+        margin-left: 70px;
+        width: 50px;
+        height: 50px;
+
+    }
+    .editprofile{
+        margin-left: 65px;
+        position: absolute;
+        font-size: 10px;
+        top: 80px;
+        width: 60px;
+        height: 15px;
+        background: #4564b3;
+        border: 1px #7888B2;
+        border-radius: 5px;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    .name{
+        font-size: 16px;
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 0.5rem;
+        color: #7888B2;
+    }
+    .line{
+        width: 100%;
+        height: 2px;
+        text-align: center;
+        margin-top: 1rem;
+        background-color: #c5d4fa;
+    }
+    
+    /* ------------- block center layout ---------*/
+    .blockcenter{
+        width: 95.2vw;
+        height: 19vw;
+        margin-top: 30px;
+        margin-left: 30px;
+        border-radius: 40px;
+        background-color: #fff;
+        box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+
+    }
+    .three-block{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        margin-top: 45px;
+        margin-left: 32px;
+    }
+    .blockcenter-left{
+        width: 29vw;
+        height: 18vw;
+        /* margin-top: 40px;
+        margin-left: 30px; */
+        border-radius: 40px;
+        background-color: #fff;
+        box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    }
+    .blockcenter-center{
+        width: 29vw;
+        height: 18vw;
+        /* margin-top: 40px;
+        margin-left: 30px; */
+        border-radius: 40px;
+        background-color: #fff;
+        box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    }
+    .blockcenter-right{
+        width: 29vw;
+        height: 18vw;
+        /* margin-top: 40px;
+        margin-left: 30px; */
+        border-radius: 40px;
+        background-color: #fff;
+        box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    }
+    @media (max-width: 500px) {
+        .li-flex {
+            margin: 0;
+            padding-left: 15vh;
+        }
+        li{
+            margin-right: 0rem;
+        }
+        .li-flex li{
+            margin: 0;
+        }
+        .dropdown, .profiledropd {
+            top: 100%; /* ปรับตำแหน่ง dropdown เพื่อแสดงบนเมนูหลักในหน้าจอขนาดเล็ก */
+        }
+        .li-flex a{
+            margin: -10px;
+            
+        }
+    }

@@ -1,0 +1,126 @@
+.navbar-custom {
+            background-color: #f8f9fa; /* Navbar background color */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08); /* Navbar shadow */
+            padding: 0.5rem 1.5rem; /* Reduce height */
+            height: 65px;
+        }
+        .navbar-brand img {
+            width: 100%; /* Adjust logo size */
+            height: 45px;
+            margin-right:13px;
+            /* border:1px solid red; */
+        }
+        .navbar-nav {
+            margin-left: auto; /* Align nav links to the right */
+        }
+        .nav-link {
+            font-size:19px;
+            font-family: sans-serif;
+            color:#7888b2;
+            margin-right: 20px;
+            padding: 10px 10px; /* เพิ่ม padding เพื่อเพิ่มพื้นที่คลิก */
+            border-radius:10px;
+        }
+        .nav-link:hover {
+            color: #1e3a8a; /* สีของลิงก์เมื่อ hover */
+            text-decoration: none; /* เพิ่มเส้นใต้เมื่อ hover */
+            background-color:  #e0e7ff; /* เปลี่ยนพื้นหลังเมื่อ hover */
+            height: auto; /* ครอบคลุมความสูงทั้งหมด */
+            width: auto; 
+        }
+        .custom-dropdown {
+            transform: translate(-130px, 12px); /* ขยับไปทางซ้าย 20px และลงล่าง 10px */
+            padding: 10px; /* เพิ่ม padding เพื่อความสวยงาม */
+            border-radius: 5px 5px 10px 10px; /* มุมโค้ง */
+            border:none;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+            width: 230px;
+        }
+        .custom-dropdown .nav-link {
+            color:#7888b2; /* สีของลิงก์ใน dropdown */
+            width: 100%; 
+        }
+        .custom-dropdown .nav-link:hover {
+            background-color: #e0e7ff; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+            border-radius: 10px;
+        }
+        .name{
+            font-size:16px;
+            font-family: sans-serif;
+            color: #7888b2;
+            margin-left: 3px;
+            border-radius:10px;
+            background-color:#ebedf1;
+            padding-left: 3px;
+            margin-bottom:3px;
+            word-wrap: break-word; /* ตัดคำลงบรรทัดใหม่เมื่อเกินความกว้าง */
+            white-space: normal; /* ทำให้ข้อความห่อเป็นหลายบรรทัดได้ */
+        }
+        .li-a-logout{
+            font-size:19px;
+            font-family: sans-serif;
+            color:#7888b2;
+            margin-right: 20px;
+            padding: 10px 10px; /* เพิ่ม padding เพื่อเพิ่มพื้นที่คลิก */
+            border-radius:10px;
+            cursor:pointer;
+            width: 100%; 
+        }
+        .li-a-logout:hover{
+            color: #edf0f9; /* สีของลิงก์เมื่อ hover */
+            text-decoration: none; /* เพิ่มเส้นใต้เมื่อ hover */
+            background-color: red; /* เปลี่ยนพื้นหลังเมื่อ hover */
+            height: auto; /* ครอบคลุมความสูงทั้งหมด */
+            width: 100%; 
+            font-weight:bold;
+        }
+        /* Wrapper to manage dropdown positioning */
+        .dropdown-menu-wrapper {
+            position: relative;
+        }
+
+        /* Dropdown toggle button */
+        .new-dropdown-toggle {
+            border: none;
+            font-size: 19px;
+            font-family: sans-serif;
+            color: #7888b2;
+            
+            margin-right: 20px;
+            padding: 10px 10px;
+            border-radius: 10px;
+        }
+
+        /* Custom styles for the dropdown menu */
+        .new-dropdown-menu {
+            position: absolute;
+            top: -20px; /* Position below the button */
+            left: 100%;
+            transform: translateY(10px); /* Adjust vertical position */
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            width: 230px; /* Width of the dropdown */
+            display: none; /* Hide by default */
+            padding: 1rem 0.5rem; /* Reduce height */
+        }
+
+        /* Show the dropdown menu on button hover */
+        .dropdown-container:hover .new-dropdown-menu {
+            display: block;
+        }
+
+        /* Styles for links inside the dropdown */
+        .new-dropdown-menu .nav-link {
+            color: #7888b2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Hover effects for links */
+        .new-dropdown-menu .nav-link:hover {
+            background-color: #e0e7ff;
+            color: #1e3a8a;
+        }
+       

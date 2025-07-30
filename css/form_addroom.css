@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(158deg, rgba(241,217,188,0.5) 0%, rgba(248,229,181,0.5) 100%);
+    margin: 0;
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+ 
+}
+
+.container {
+    max-width: 600px; /* set container width */
+    margin: 20px auto; /* center the container */
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    overflow: auto;
+
+}
+
+.container h2 {
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.container input[type="text"],
+.container input[type="number"],
+.container input[type="email"],
+.container input[type="password"],
+.container input[type="file"],
+.container select,
+.container textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-left: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.1em;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 10px; /* ขยับ container ไปทางขวา */
+
+}
+.container input[type="date"] {
+    width: calc(100% - 24px); /* เพิ่มความกว้างให้ชัดเจน */
+    padding: 12px;
+    margin: 0px; /* ลดช่องว่างเพื่อให้ชิดกันมากขึ้น */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    appearance: none; /* ลบ UI ของเบราว์เซอร์ที่เป็นดีฟอลต์ */
+    -webkit-appearance: none; /* สำหรับ Safari */
+    -moz-appearance: none; /* สำหรับ Firefox */
+    margin-left: 10px; /* ขยับ container ไปทางขวา */
+}
+.container input[type="time"] {
+    width: calc(100% - 24px); /* เพิ่มความกว้างให้ชัดเจน */
+    padding: 12px;
+    margin: 0px; /* ลดช่องว่างเพื่อให้ชิดกันมากขึ้น */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    appearance: none; /* ลบ UI ของเบราว์เซอร์ที่เป็นดีฟอลต์ */
+    -webkit-appearance: none; /* สำหรับ Safari */
+    -moz-appearance: none; /* สำหรับ Firefox */
+    margin-left: 10px; /* ขยับ container ไปทางขวา */
+}
+/* สำหรับกรอบกลุ่ม */
+.twogroup {
+    display: flex;
+    justify-content: space-between; /* ช่องว่างระหว่าง input */
+    margin: 12px 0; /* ลดช่องว่างด้านนอก */
+    box-sizing: border-box;
+    width: 100%;
+}
+.container textarea {
+    height: 100px; /* กำหนดความสูงให้ textarea */
+}
+.container button {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.container .submit {
+    background-color: rgb(0, 174, 255);
+}
+
+.container .submit:hover {
+    background-color: rgb(0, 92, 142);
+    transition: 3ms;
+}
+
+.container .cancel {
+    background-color: red;
+}
+
+.container .cancel:hover {
+    background-color: darkred;
+}
+
+
+.container .login-link {
+    margin-top: 30px;
+    color: #FFA500;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline;
+}
+
+.container .login-link:hover {
+    text-decoration: underline;
+}
+
+.preview {
+    margin-top: 12px;
+    max-width: 95%;
+    margin: auto;
+    height: auto;
+}
+.text-content{
+    text-align: center;
+    font-family: "Prompt", sans-serif;
+    font-size: 40px;
+    color: #717FA1;
+    font-weight: 500;
+    font-style: normal;
+}
+.detail_text{
+    text-align: left;
+    font-size: 20px;
+    font-style: normal;
+    margin: auto;
+    width: 500px;
+    color: #6c7997;
+    padding-top: 20px;
+}
+.text_confirm{
+    text-align: center;
+    font-family: "Prompt", sans-serif;
+    font-size: 40px;
+    color: #717FA1;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.container .turn_but{
+    background-color: rgb(0, 174, 255);
+}
+
+.container .turn_but:hover {
+    background-color: rgb(0, 92, 142);
+    transition: 3ms;
+}
+
+.form__group {
+    position: relative;
+    flex: 1; /* ให้กลุ่มใช้พื้นที่ที่มีอยู่ */
+    margin: 0 5px; /* ลดช่องว่างระหว่างกลุ่ม */
+    display: flex;
+    flex-direction: column; /* จัดให้ label อยู่เหนือ input */
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: white; /* เพิ่ม background เพื่อไม่ให้ซ้อนกับ input */
+    padding: 0 5px;
+    border-radius: 10px;
+    color: #717FA1;
+}
+
+.form__input:placeholder-shown + .form__label {
+    transform: translateY(-1%);
+    opacity: 0;
+}
+
+.form__input:not(:placeholder-shown) + .form__label {
+    transform: translateY(-20%);
+    opacity: 1;
+    
+}
+.form__input:focus {
+    border: 1px solid rgb(0, 153, 167) !important; /* สีขอบที่ต้องการ */
+    outline: none; /* ซ่อนเส้นขอบมาตรฐาน */
+    box-shadow: 0 0 2px rgb(56, 168, 190); /* เพิ่มเงาสำหรับความสวยงาม */
+}
+
+.twogroup .form__label {
+    position: absolute;
+    top: -10px; /* ปรับตำแหน่งของ label ให้อยู่สูงขึ้น */
+    padding: 0 5px; /* กำหนด padding ให้ไม่ติดลบ และให้มีช่องว่างด้านข้าง */
+    background: white; /* เพื่อไม่ให้ label ซ้อนกับ input */
+    font-size: 0.9em; /* ลดขนาดของ font ลงเล็กน้อย ถ้าต้องการ */
+    color: #717FA1; /* สีของ label */
+    transition: top 0.3s ease, transform 0.3s ease; /* เพิ่ม transition เพื่อให้การขยับนุ่มนวล */
+}
+.twogroup .form__group input[type="number"]{
+    padding: 11px;
+    margin: 0;
+    width: 96%;
+}
+
+/* ปรับโค้ดนี้เพื่อซ่อน label จนกว่าจะมีการคลิก */
+.form__select:not(:focus):not(:valid) + .form__label {
+    transform: translateY(-1%);
+    opacity: 0;
+}
+
+.form__select:focus {
+    border: 1px solid rgb(0, 153, 167) !important; /* สีขอบที่ต้องการ */
+    outline: none; /* ซ่อนเส้นขอบมาตรฐาน */
+    box-shadow: 0 0 2px rgb(56, 168, 190); /* เพิ่มเงาสำหรับความสวยงาม */
+    
+}
+.form__select:focus + .form__label,
+.form__select:not([value=""]) + .form__label {
+    transform: translateY(-20%);
+    opacity: 1;
+}
+

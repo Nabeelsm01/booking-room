@@ -1,0 +1,233 @@
+.flatpickr-input {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    background: #f9f9f9;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn-custom {
+    background: #007bff;
+    color: #fff;
+}
+
+.btn-custom:hover {
+    background: #0056b3;
+    color: #fff;
+} .stepper {
+    display: flex;
+    justify-content: space-around; 
+    margin-bottom: 10px;
+    margin-top: 10px; /* ขยับลงมานิดนึง */
+    margin-left: 23%; /* ขยับไปทางขวามือ */
+    position: relative;
+
+}
+
+.step {
+    text-align: center;
+    flex-basis: 250px; /* เพิ่มความกว้าง */
+    position: relative;
+    z-index: 1;
+}
+
+.step::before, .step::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    height: 4px;
+    background-color: #e9ecef;
+    z-index: -1;
+}
+
+.step::before {
+    left: -20px;
+    right: 50%;
+}
+
+.step::after {
+    right: -20px;
+    left: 50%;
+}
+
+.step:first-child::before {
+    content: none;
+}
+
+.step:last-child::after {
+    content: none;
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.step.active .step-circle {
+    background-color: #28a745;
+    transform: scale(1.1);
+}
+
+.step.active::before, .step.active::after {
+    background-color: #28a745; /* สีเส้นเมื่อ active */
+}
+
+.step-title {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.step.active .step-title {
+    color: #28a745;
+}
+
+/* bootstrap */
+.custombtnfood{
+    width:100%; 
+    height:100%; 
+    background:none;
+    border:none;
+    color:#6075ab;
+}
+.custombtnfood:hover{
+    background-color:  #90a7dc; /* สีเขียว */
+    color: #fff;
+}
+.modal-custom{
+    max-width: 50%; 
+}
+.body-custom{
+    background-color: #d3e0ff; 
+}
+.b1{
+    margin:auto;
+    width: 97%;
+    height: 70px;
+    display:flex;
+    background-color: #fff;
+    border-radius:5px;
+    color:#6075ab;
+    box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.02);
+    padding:5px;
+    justify-content: space-between; 
+    margin-bottom:5px;
+}
+.b2.left{
+    flex-grow:1;
+    max-width:100px;
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    border-radius:5px;
+}
+.b2.center1{
+    flex-grow:1;
+    margin:auto;
+    margin-left:10px;
+    width:250px;
+    overflow:hidden;
+    white-space: nowrap; /* ป้องกันการตัดบรรทัดใหม่ */
+    text-overflow: ellipsis; /* แสดง ... เมื่อข้อความยาวเกินไป */
+}
+.b2.center2{
+    flex-grow:1;
+    margin:auto;
+    margin-left:10px;
+    width:50px;
+    text-align:left;
+    overflow:hidden;
+}
+.b2.right{
+    flex-grow:1;
+    text-align:center;
+    margin:auto;
+}
+.modal3-img{
+    max-width:10vw;
+    width:100%;
+    height:10vw;
+    object-fit:cover;
+    border-radius:10px;
+    margin-right:10px;
+}
+.modal3-name{
+    font-size:22px;
+    color:#6075ab;
+    max-width:20vw;
+    max-height:5vw;
+    height:auto;
+    overflow:hidden;
+    text-overflow: ellipsis; /* แสดง ... เมื่อข้อความยาวเกินไป */
+    margin-bottom:5px;
+}
+.modal3-price{
+    font-size:20px;
+    color:#6075ab;
+}
+.modal3container{
+    display:flex;
+}
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6075ab;
+    justify-content: left;
+    margin: 0; /* ลบ margin ออกเพื่อลดช่องว่าง */
+    padding:  0; /* เพิ่ม padding เล็กน้อยให้ยังมีระยะ */
+    line-height:0.5 ;  /* ปรับ line-height เพื่อลดช่องว่างระหว่างบรรทัด */
+    margin-left:5px;
+}
+
+.total-all {
+    display: flex;
+    flex-direction: column; /* แสดงจำนวนรวมและราคารวมในแนวตั้ง */
+    margin-left: 0;
+    text-align: left;
+}
+.modal-footer button {
+    margin: 0; /* ปรับให้ไม่มีช่องว่างระหว่างปุ่ม */
+}
+.total22 {
+    font-size: 16px;
+    color: #6075ab;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    margin-left: 5px;
+}
+
+.custom-modal2-footer {
+    display: flex;
+    justify-content: space-between; /* กระจายเนื้อหาระหว่างซ้ายและขวา */
+    align-items: center;
+    width: 100%;
+}
+
+.total-all22 {
+    display: flex;
+    gap: 10px; /* เพิ่มช่องว่างระหว่างปุ่ม */
+}
+
+
+.btn-custom5{
+    border-radius: 35%;
+    background-color: #d3e0ff; 
+    border:2px solid #90a7dc; 
+    transition: 0.5s ease; /* เพิ่มการเปลี่ยนสีแบบนุ่มนวล */
+}
+.btn-custom5:hover {
+    background-color:#6075ab;
+    border:none; 
+    color:#d3e0ff; ;
+}

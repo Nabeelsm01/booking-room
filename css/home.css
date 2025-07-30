@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html, body {
+    background: linear-gradient(158deg, rgba(184,201,245,0.7) 0%, rgba(181,232,248,0.7) 100%);
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ------------- block center layout ---------*/
+.allblockcenter {
+    padding: 60px 0 0 0;
+    box-sizing: border-box;
+}
+
+.blockcenter {
+    width: calc(100% - 100px);
+    height: 19vw;
+    margin: 30px auto;
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้สมูทขึ้น */
+    margin-bottom: -10px;
+}
+
+.three-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* สร้าง 3 คอลัมน์ */
+    gap: 30px;
+    margin: 45px 0 0;
+    padding: 0 50px;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้สมูทขึ้น */
+}
+
+.block {
+    height: 290px; /* ปรับความสูงให้พอดีกับเนื้อหา */
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    text-align: left; /* จัดข้อความให้ชิดซ้าย */
+    margin-bottom:25px ;
+}
+.block img {
+    width: 100%; /* กำหนดความกว้างเต็มที่ */
+    height: 140px; /* กำหนดความสูงตามที่ต้องการ */
+    object-fit: cover; /* ตัดส่วนเกินของรูปภาพออก เพื่อให้ภาพพอดีกับขนาด */
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+.block h2 {
+    color: #53648b;
+    margin-bottom: 5px;
+    font-size: 20px;   
+    margin-left: 10px;
+}
+.block p{
+    color: #717FA1;
+    margin-left: 20px;
+}
+
+.texthead{
+    font-family: sans-serif;
+    text-align: center;
+    
+}
+.text-content{
+    padding-top: 40px;
+    text-align: center;
+    font-family: "Prompt", sans-serif;
+    font-size: 35px;
+    color: #717FA1;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .allblockcenter {
+        padding: 30px 10px 0; /* ลด padding ด้านข้าง */
+    }
+
+    .blockcenter {
+        width: calc(100% - 20px); /* ขยายบล็อกให้กว้างขึ้น */
+        height: 18vw; /* ลดความสูง */
+        margin: 10px 0; /* ลดช่องว่างระหว่าง blockcenter กับ three-block */
+        border-radius: 30px; /* ลด border-radius */
+        margin-top: 40px;
+        padding-top: 150px;
+        margin-left: 10px;
+    }
+
+    .three-block {
+        gap: 10px; /* ลดช่องว่าง */
+        padding: 0 10px; /* ลดช่องว่างจากขอบหน้าจอ */
+    }
+
+    .blockcenter-left, .blockcenter-center, .blockcenter-right {
+        height: 25vw; /* ขยายขนาด height */
+        border-radius: 30px; /* ลด border-radius */
+    }
+}
+
+@media (max-width: 480px) {
+    .allblockcenter {
+        padding: 30px 10px 0; /* ลด padding ด้านข้าง */
+    }
+
+    .blockcenter {
+        width: calc(100% - 20px); /* ขยายบล็อกให้กว้างขึ้น */
+        height: 18vw; /* ลดความสูง */
+        margin: 10px 0; /* ลดช่องว่างระหว่าง blockcenter กับ three-block */
+        border-radius: 30px; /* ลด border-radius */
+        margin-top: 40px;
+        padding-top: 150px;
+        margin-left: 10px;
+    }
+
+    .three-block {
+        gap: 10px; /* ลดช่องว่าง */
+        padding: 0 10px; /* ลดช่องว่างจากขอบหน้าจอ */
+    }
+
+    .blockcenter-left, .blockcenter-center, .blockcenter-right {
+        height: 25vw; /* ขยายขนาด height */
+        border-radius: 30px; /* ลด border-radius */
+    }
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #B8C9F5;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.search-input {
+    border: none;
+    padding: 10px 20px;
+    width: 330px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 25px 0 0 25px;
+    margin: auto;
+    background-color: #B8C9F5;
+}
+
+.search-input::placeholder {
+    color: #ffffff;
+    
+}
+.search-input:hover{
+    background-color: #d3e0ff;
+}
+
+.search-button {
+    background-color: #B8C9F5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 25px 25px 0;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #d3e0ff;
+}
+
+.search-button svg {
+    fill: none;
+    stroke: #333;
+}
+.search-container:hover{
+    box-shadow: 0 8px 20px rgba(86, 188, 255, 0.3);
+}
+
+.btn-other {
+    background-color: #d3e0ff; /* สีเขียว */
+    border: 2px solid #90a7dc;
+    color: #6075ab;
+    padding: 3px 18px;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+    float: right;
+    margin-right: 10px;
+    margin-top: -15px; /* ขยับขึ้น */
+
+}
+
+.btn-other:hover {
+    background-color: #90a7dc;
+    box-shadow: 0 6px 8px rgba(47, 182, 227, 0.2);
+    color:#fff;   
+}
+h2{
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+}
+
+.space{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.footer_home{
+    margin-bottom: auto;
+    height: 30px;
+}
+.alert {
+    opacity: 0; /* เริ่มต้นด้วยการซ่อน */
+    transform: translateY(-50px); /* เริ่มต้นที่นอกหน้าจอด้านบน */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* ตั้งค่า transition */
+}
+
+.intro-container {
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    position: relative; /* ตั้งค่าตำแหน่งเพื่อใช้กับพื้นหลัง */
+    background-image: url('path/to/your/background-image.gif'); /* เปลี่ยนเป็นเส้นทางของภาพหรือ GIF */
+    background-size: cover; /* ปรับขนาดพื้นหลังให้เต็มพื้นที่ */
+    background-position: center; /* จัดตำแหน่งพื้นหลังให้กลาง */
+    border-radius: 8px; /* เพิ่มมุมโค้ง */
+    color: white; /* เปลี่ยนสีตัวอักษรเป็นสีขาวเพื่อให้อ่านง่ายขึ้น */
+}
+
+.intro-text {
+    font-size: 1.2em; /* ขยายขนาดตัวอักษร */
+    color: #72798d; /* สีตัวอักษรเข้มขึ้น */
+    line-height: 1.6; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    padding-bottom: 10px; /* ระยะห่างระหว่างข้อความและไอคอน */
+    font-family: "Prompt", sans-serif;
+    font-weight: 500; /* ปรับน้ำหนักตัวอักษร */
+    position: relative; /* ตั้งค่าตำแหน่งให้ข้อความอยู่เหนือพื้นหลัง */
+    z-index: 1; /* เลื่อนข้อความให้อยู่เหนือพื้นหลัง */
+}
+
+.intro-images {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่กลาง */
+    position: relative; /* ตั้งค่าตำแหน่งให้ข้อความอยู่เหนือพื้นหลัง */
+    z-index: 1;
+    position: relative; /* ตั้งค่าตำแหน่งให้ข้อความอยู่เหนือพื้นหลัง */
+    top:-100px;
+    z-index: 1; /* เลื่อนข้อความให้อยู่เหนือพื้นหลัง */
+    border-radius:10px;
+}
+
+.animated-image {
+    max-width: 270px;
+    width: 100%; /* ขนาดภาพ */
+    height: auto; /* ให้สูงตามสัดส่วน */
+    animation: float 3s ease-in-out infinite; /* เพิ่มการอนิเมชันแบบลอย */
+    border-radius:10px;
+}
+
+
+
+

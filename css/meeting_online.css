@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10vh;
+    height: 100vh;
+    background: linear-gradient(158deg, rgba(184,201,245,0.7) 0%, rgba(181,232,248,0.7) 100%);
+    overflow: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+.hh_name{
+    text-align: center; /* จัดกึ่งกลางในแนวนอน */
+    color: #717FA1;
+    background-color: rgba(255, 255, 255, 1); 
+    border-radius: 15px;
+    padding:20px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Prompt", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+    margin-top:5vh;
+    margin-bottom:2vh;
+}
+.container_block{
+    display:flex;
+    gap:40px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    border-radius: 15px;
+    padding:5vh 10vh;
+    height:50vh auto;
+    margin-bottom:3vh;
+}
+#form-container {
+    display: flex;
+    flex-direction: column; /* จัดองค์ประกอบเป็นแนวตั้ง */
+    justify-content: center; /* จัดกึ่งกลางในแนวตั้ง */
+    align-items: center; /* จัดกึ่งกลางในแนวนอน */
+    text-align: center;
+    height: 30vh; /* ตั้งความสูงของบล็อกให้เต็มความสูงของหน้าจอ */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 1); 
+    border-radius: 15px;
+    flex-grow:1;
+    width: 100%;
+    color: #717FA1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top:30px;
+}
+
+.block_element{
+    flex-grow:1;
+    color: #717FA1;
+    height:100%;
+    width: 100%;
+}
+.h_name{
+    margin-bottom:25px;
+}
+.name_tutor{
+    font-family: "Prompt", sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom:15px;
+}
+.list_tutor{
+    font-family: "Prompt", sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: -15px;
+}
+#form-container input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border-radius:10px;
+    border: 1px solid  #90a7dc;
+}
+#form-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius:10px;
+    border: 1px solid #90a7dc;
+}
+#form-container button:hover{
+    background-color: #90a7dc;
+    color:#fff;
+    transition: 0.3s;
+}
+#meeting-container {
+    width: 80%;
+    height: 80%;
+    margin-top: 20px;
+}
+button {
+    cursor:pointer;
+}
+.turn-btn {
+    background-color: white; /* Green */
+    color: #717FA1;
+    padding: 13px 20px;
+    text-align: center;
+    text-decoration: none; 
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.turn-btn:hover {
+    background-color:#90a7dc;
+    color:#fff;
+    text-decoration: none;
+    transition: 0.3s;
+  
+}

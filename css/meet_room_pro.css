@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    background: linear-gradient(158deg, rgba(184,201,245,0.7) 0%, rgba(181,232,248,0.7) 100%);
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------- block center layout ---------*/
+.allblockcenter {
+    padding: 60px 30px 0;
+    box-sizing: border-box;
+}
+
+.blockcenter {
+    width: calc(100% - 60px);
+    height: 15vw;
+    margin: 30px auto;
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้สมูทขึ้น */
+}
+.blockcenter_2 {
+    width: calc(100% - 60px);
+    height: 12vw;
+    margin: 30px auto;
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้สมูทขึ้น */
+}
+.three-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* สร้าง 3 คอลัมน์ */
+    gap: 30px;
+    margin: 45px 0 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้สมูทขึ้น */
+}
+
+.custom-block {
+    height: auto;
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                border 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                background-color 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    position: relative; /* เพิ่ม position ให้ block */
+}
+
+.custom-block img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    transition: opacity 0.5s ease;
+}
+
+.custom-block:hover img {
+    filter: brightness(0.5);
+    transition: 0.3s;
+}
+
+.overlay {
+    position: absolute;
+    top: 75px; /* ระยะห่างจากด้านบนของรูปภาพ */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-family: "Prompt", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    white-space: nowrap; /* ป้องกันข้อความยาวเกินออกมา */
+}
+
+.custom-block:hover .overlay {
+    opacity: 1;
+}
+.custom-block h2 {
+    color: #717FA1;
+    margin-bottom: 1px;
+    font-size: 20px;
+    word-wrap: break-word; /* ตัดคำลงบรรทัดใหม่เมื่อเกินความกว้าง */
+    white-space: normal; /* ทำให้ข้อความห่อเป็นหลายบรรทัดได้ */
+    
+}
+.custom-block p{
+    color: #717FA1;
+    margin-bottom: 1px;
+}
+
+.custom-block .inline-wrapper {
+    display: flex; /* ใช้ flexbox สำหรับจัดเรียง inline_1 และ inline_2 */
+    justify-content: space-between; /* จัดให้มีระยะห่างเท่ากัน */
+    align-items: flex-start; /* จัดให้อยู่ด้านบน */
+}
+
+.custom-block .inline_1, .custom-block .inline_2 {
+    width: 50%; /* กำหนดความกว้างเท่ากัน */
+    padding: 5px; /* เพิ่ม padding ให้กับ inline */
+    background-color: #f7f9ff;
+    border-radius: 10px; /* เพิ่มความมนให้มุม */
+    color: #666; /* เปลี่ยนสีข้อความ */
+    box-sizing: border-box; /* รวม padding ในการคำนวณความกว้าง */
+}
+.custom-block .inline_2 {
+    margin-left: 5px; /* ลด margin ซ้าย */
+}
+
+.custom-block:hover {
+    transform: translateY(-5px); /* ยกบล็อกขึ้นเมื่อ hover */
+    box-shadow: 0 15px 20px rgba(103, 183, 205, 0.2); /* เพิ่มเงาเมื่อ hover */
+    background-color: #eff3ff;
+    cursor: pointer; 
+}
+
+.custom-block:not(:hover) {
+    transform: translateY(0); /* กลับสู่ตำแหน่งเดิมอย่างนุ่มนวล */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* ลดเงาเมื่อไม่ hover */
+}
+.details {
+    max-height: 50px; /* ความสูงสูงสุดที่จะแสดง */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกิน */
+    transition: max-height 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้สมูท */
+}
+
+.details.expanded {
+    max-height: none; /* ขยายความสูงเพื่อแสดงทั้งหมด */
+}
+
+
+.texthead{
+    font-family: sans-serif;
+    text-align: center;
+    
+}
+.text-content{
+    padding-top: 40px;
+    text-align: center;
+    font-family: "Prompt", sans-serif;
+    font-size: 35px;
+    color: #717FA1;
+    font-weight: 500;
+    font-style: normal;
+}
+.text-content_2{
+    padding-top: 40px;
+    text-align: left;
+    font-family: "Prompt", sans-serif;
+    font-size: 40px;
+    color: #717FA1;
+    font-weight: 500;
+    font-style: normal;
+    margin-left: 40px;
+    padding-top: 20px;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .allblockcenter {
+        padding: 30px 10px 0; /* ลด padding ด้านข้าง */
+    }
+
+    .blockcenter {
+        width: calc(100% - 20px); /* ขยายบล็อกให้กว้างขึ้น */
+        height: 18vw; /* ลดความสูง */
+        margin: 10px 0; /* ลดช่องว่างระหว่าง blockcenter กับ three-block */
+        border-radius: 30px; /* ลด border-radius */
+        margin-top: 40px;
+        padding-top: 150px;
+        margin-left: 10px;
+    }
+
+    .three-block {
+        gap: 10px; /* ลดช่องว่าง */
+        padding: 0 10px; /* ลดช่องว่างจากขอบหน้าจอ */
+    }
+
+    .blockcenter-left, .blockcenter-center, .blockcenter-right {
+        height: 25vw; /* ขยายขนาด height */
+        border-radius: 30px; /* ลด border-radius */
+    }
+}
+
+@media (max-width: 480px) {
+    .allblockcenter {
+        padding: 30px 10px 0; /* ลด padding ด้านข้าง */
+    }
+
+    .blockcenter {
+        width: calc(100% - 20px); /* ขยายบล็อกให้กว้างขึ้น */
+        height: 18vw; /* ลดความสูง */
+        margin: 10px 0; /* ลดช่องว่างระหว่าง blockcenter กับ three-block */
+        border-radius: 30px; /* ลด border-radius */
+        margin-top: 40px;
+        padding-top: 150px;
+        margin-left: 10px;
+    }
+
+    .three-block {
+        gap: 10px; /* ลดช่องว่าง */
+        padding: 0 10px; /* ลดช่องว่างจากขอบหน้าจอ */
+    }
+
+    .blockcenter-left, .blockcenter-center, .blockcenter-right {
+        height: 25vw; /* ขยายขนาด height */
+        border-radius: 30px; /* ลด border-radius */
+    }
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #B8C9F5;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.search-input {
+    border: none;
+    padding: 10px 20px;
+    width: 330px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 25px 0 0 25px;
+    margin: auto;
+    background-color: #B8C9F5;
+}
+
+.search-input::placeholder {
+    color: #ffffff;
+    
+}
+.search-input:hover{
+    background-color: #d3e0ff;
+}
+
+.search-button {
+    background-color: #B8C9F5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 25px 25px 0;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #d3e0ff;
+}
+
+.search-button svg {
+    fill: none;
+    stroke: #333;
+}
+.search-container:hover{
+    box-shadow: 0 8px 20px rgba(86, 188, 255, 0.3);
+}
+/* ิbuttonnnnnnnnnnn --------------------------- */
+.buttonmanage {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 25px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    padding: 5px 15px;
+    border-radius: 25px;
+    color: #90a7dc;
+    border: 2px solid transparent;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-clip: padding-box;
+    position: relative;
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.btn-apply-add {
+    background-color: #d3e0ff; /* สีเขียว */
+    border: 2px solid #90a7dc;
+    color: #6075ab;
+    padding: 5px 18px;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+}
+
+.btn-apply-add:hover {
+    background-color: #90a7dc;
+    box-shadow: 0 6px 8px rgba(47, 182, 227, 0.2);
+    color:#fff;
+    
+}
+
+.btn-apply-edit {
+    background-color: #d3e0ff; /* สีเขียว */
+    border: 2px solid #90a7dc;
+    color: #6075ab;
+    padding: 3px 18px;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+}
+
+.btn-apply-edit:hover {
+    background-color: #e68a00;
+    box-shadow: 0 6px 8px rgba(255, 115, 0, 0.2);
+    border-color: #e68a00;
+    color:#fff;
+}
+
+.btn-apply-delete {
+    background-color: #d3e0ff; /* สีเขียว */
+    border: 2px solid #90a7dc;
+    color: #6075ab;
+    padding: 3px 18px;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+}
+
+.btn-apply-delete:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 6px 8px rgba(255, 0, 0, 0.2);
+    border-color: #d32f2f;
+    color:#fff;
+}
+.toggle-details {
+    background-color:none; /* สีพื้นหลัง */
+    color: #495c8c; /* สีตัวอักษร */
+    border: none; /* สีขอบ */
+    border-radius: 10px; /* รูปทรงมุมกลม */
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-weight: 500; /* หนักขึ้นเล็กน้อย */
+    font-size: 13px; /* ขนาดฟอนต์ */
+}
+
+
+h2{
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+}
+
+.custom-modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 20px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.custom-modal-content {
+
+        background-color: #fefefe;
+        margin: 5% auto; /* Centered horizontally with top margin */
+        padding: 30px;
+        width: 80%; /* Adjust according to screen size */
+        border-radius: 25px;
+        max-height: 80vh; /* Limit height to viewport height */
+        overflow-y: auto; /* Enable scrolling if content overflows */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+        position: relative; /* Make sure .custom-btn-modal positions relative to this */
+}
+
+.custom-close {
+    color: #b90202;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.custom-close:hover,
+.custom-close:focus {
+    color: rgb(126, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.custom-image-content {
+    background-color: #424448;
+    padding: 20px 0px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: flex-end; /* Align right */
+    align-items: center;
+    overflow: hidden;
+    margin-left: auto; /* Move to the right */
+    margin-top: 10px;
+}
+
+#custom-modal-img {
+    width: 100%;
+    height: auto; /* Fit height */
+    object-fit: cover; /* Cover area and crop excess */
+    margin-right: 0;
+}
+
+#custom-modal-title {
+    color: #717FA1;
+    margin-bottom: 10px;
+    font-size: 28px;
+    max-width: 100%;
+    word-wrap: break-word; /* Break words to new line */
+    white-space: normal; /* Allow text to wrap */
+}
+
+#custom-modal-details {
+    color: #717FA1;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 95%;
+    word-wrap: break-word; /* Break words to new line */
+    white-space: normal; /* Allow text to wrap */
+    margin-left: 10px;
+}
+
+.custom-layout-modal {
+    display: flex;
+
+}
+
+.custom-layout-text {
+    display: block;
+    flex: 1;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.custom-layout-calender {
+    display: block;
+    flex: 1;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+
+.custom-btn-modal {
+    padding: 10px 10px;
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom edge */
+    right: 40px; /* Distance from the right edge */
+    
+}
+.btn-apply{
+    background-color: #d3e0ff; /* สีเขียว */
+    border: 2px solid #90a7dc;
+    color: #6075ab;
+    padding: 3px 18px;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+}
+.btn-apply:hover {
+    background-color: #90a7dc;
+    box-shadow: 0 6px 8px rgba(47, 182, 227, 0.2);
+    color:#fff;   
+}
+
+.btn-food{
+    background-color: #fff; /* สีเขียว */
+    border: 3px solid rgba(255, 255, 255, 0.5); /* ใช้ border สีขาวพร้อมความใส */
+    color: #6075ab;
+    padding: 3px 18px;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+    margin-right: 15px;
+    
+}
+.btn-food:hover {
+    background-color: #90a7dc;
+    box-shadow: 0 6px 8px rgba(47, 182, 227, 0.2);
+    color:#fff;   
+}
+.buttonmanage-2{
+    display: flex;
+    justify-content: flex-end;
+
+}
+/* สำหรับ Webkit-based browsers (Chrome, Safari) */
+
+.custom-modal-content::-webkit-scrollbar-track {
+    background:#90a7dc; /* สีพื้นหลังของ scrollbar */
+    border-radius: 10px; /* มุมของ scrollbar track */
+}
+
+.custom-modal-content::-webkit-scrollbar-thumb {
+    background:#d3e0ff; /* สีของ scrollbar thumb */
+    border-radius: 10px; /* มุมของ scrollbar thumb */
+}
+
+.custom-modal-content::-webkit-scrollbar-thumb:hover {
+    background:#d3e0ff;/* สีของ scrollbar thumb เมื่อ hover */
+}
+
+/* สำหรับ Firefox */
+.custom-modal-content {
+    scrollbar-width: thin; /* ขนาดของ scrollbar */
+    scrollbar-color:#d3e0ff#90a7dc; /* สีของ scrollbar thumb และ track */
+}
+.custom-line {
+    border-top: 1px solid #dddddd; /* สีและความหนาของเส้น */
+    margin: 10px 0; /* ระยะห่างด้านบนและด้านล่าง */
+}
+
+
+
+
+
+
+ /* -------ระบบ รีวิวววว */
+
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input:checked ~ label {
+    color: #ffd700;
+}
+.stars {
+    color: #ffd700;
+}
+
+/* ... (existing styles) ... */
+
+.overall-rating {
+    text-align: center;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    padding: 3px;
+    margin: 0;
+    box-shadow: var(--shadow);
+    display: flex;
+}
+.overall-stars {
+    font-size: 1rem;
+    color: #ffd700;
+    margin-right: 4px;
+}
+.overall-number {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 2px;
+    margin-top: 3px;
+}
+.review-count {
+    font-size: 0.8rem;
+    color: #777;
+    margin: 2px;
+    margin-top: 3px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+}
+
+.review-form, .reviews-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.rating-stars input {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input:checked ~ label {
+    color: #ffd700;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.review-box {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.review-box:hover {
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.stars {
+    color: #ffd700;
+}
+
+.review-content {
+    background-color: #e6e9ebb5;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #777;
+    font-size: 0.9em;
+}
+/* ... (existing styles) ... */

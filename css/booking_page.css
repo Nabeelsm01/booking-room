@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    background: linear-gradient(158deg, rgba(184,201,245,0.7) 0%, rgba(181,232,248,0.7) 100%);
+    overflow: auto;
+    padding: 20px;
+    padding-top:25px;
+    
+}
+
+/* ------------- block center layout ---------*/
+.allblockcenter {
+    padding: 60px 30px 0;
+    box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
+    font-style: normal;
+}
+
+.blockcenter_2 {
+    width: calc(100% - 40px);
+    height: 6vw;
+    margin:  auto;
+    margin-top: -30px;
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้สมูทขึ้น */
+    display: flex;
+    padding: auto;
+    overflow: hidden;
+}
+.blockcenter_3 {
+    width: calc(100% - 40px);
+    height: 30vw auto;
+    margin: 20px auto;
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้สมูทขึ้น */
+    padding: 40px;
+    padding-left: 50px;
+    display: flex;
+    gap: 5px;
+   
+} 
+.blockcenter_4 {
+    width: calc(100% - 40px);
+    height: 30vw auto;
+    margin: 20px auto;
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้สมูทขึ้น */
+    padding: 40px;
+    padding-left: 50px;
+
+} 
+
+.text-content_2{
+    padding-top: 40px;
+    text-align: left;
+    font-family: "Prompt", sans-serif;
+    font-size: 32px;
+    color: #717FA1;;
+    font-weight: 500;
+    font-style: normal;
+    margin-left: 40px;
+    padding-top: 20px;
+    margin-top: 5px;
+}
+.turn-btn {
+    background-color: white; /* Green */
+    color: #717FA1;
+    padding: 13px 20px;
+    text-align: center;
+    text-decoration: none; 
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    margin-top: -10px;
+    box-shadow: 0 5px 10px 7px rgba(0, 0, 0, 0.05);
+}
+
+.turn-btn:hover {
+    background-color:#90a7dc;
+    color:#fff;
+    text-decoration: none;
+    transition: 0.5s;
+    box-shadow: 2px 2px 5px #8892a8;
+}
+.blockcenter_3 p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #717FA1;
+    max-width: 90%;
+    word-wrap: break-word; /* Break words to new line */
+    white-space: normal; /* Allow text to wrap */
+    /* border:1px solid red; */
+    margin-left: 5px;
+}
+
+.blockcenter_3 strong {
+    font-weight: 600;
+    color: #717FA1;
+}
+.image_room{
+    max-width:200px;
+    width: 100%;
+    height:auto;
+    border-radius:5px;
+    margin-bottom: 20px;
+}
+.p-detail{
+    flex-grow: 1;
+    width:100%;
+    padding: 5px;
+
+  
+}
+.p-detail_2{
+    flex-grow: 1;
+    width:100%;
+    padding: 5px 15px;
+    /* border:1px solid red; */
+
+}
+.input-detail{
+    flex-grow: 1;
+    width:100%;
+    padding: 5px 15px;
+    
+ 
+}
+.text-head{
+    font-size:23px;
+    color: #717FA1;
+   
+}
+.text-head-con{
+    margin-bottom: 10px;
+}
+.text_p{
+   
+    flex-grow:1; 
+    padding: 5px 15px;
+}
+.container_p{
+   
+    margin-bottom: 25px;
+}
+.container_text{
+    display:flex;
+    margin-top: 10px;
+
+}
+.text_p p{
+    color: #717FA1;
+    font-size:18px;
+
+}
+.room-image {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 30px;
+}
+.linewidth{
+    width: 100%;
+    height: 4px;
+    background-color: #d6dae7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.line-height{
+    flex-grow: 1;
+    width:7px;
+    background-color: #eeeeef;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.input input[type="text"],
+.input input[type="email"],
+.input input[type="password"],
+.input select,
+.input input[type="number"] 
+{
+    width: calc(100% - 40%);
+    padding: 7px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.input input[type="date"] {
+    width: calc(100% - 40%); /* เพิ่มความกว้างให้ชัดเจน */
+    padding: 7px;
+    margin: 6px 0px; /* ลดช่องว่างเพื่อให้ชิดกันมากขึ้น */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+    appearance: none; /* ลบ UI ของเบราว์เซอร์ที่เป็นดีฟอลต์ */
+    -webkit-appearance: none; /* สำหรับ Safari */
+    -moz-appearance: none; /* สำหรับ Firefox */
+    
+}
+.form__group {
+    position: relative;
+}
+
+.form__label {
+    position: absolute;
+    top: -3px;
+    left: 10px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: white; /* เพิ่ม background เพื่อไม่ให้ซ้อนกับ input */
+    padding: 0 5px;
+    border-radius: 5px;
+    color: #717FA1;
+    font-size: 14px;
+    height: 15px;
+}
+
+.form__input:placeholder-shown + .form__label {
+    transform: translateY(-1%);
+    opacity: 0;
+}
+
+.form__input:not(:placeholder-shown) + .form__label {
+    transform: translateY(-20%);
+    opacity: 1;
+    
+}
+.form__input:focus {
+    border: 1px solid rgb(0, 153, 167) !important; /* สีขอบที่ต้องการ */
+    outline: none; /* ซ่อนเส้นขอบมาตรฐาน */
+    box-shadow: 0 0 2px rgb(56, 168, 190); /* เพิ่มเงาสำหรับความสวยงาม */
+}
+
+.btn-submit{
+    width: calc(100% - 40%);
+    background-color: #d3e0ff; /* สีเขียว */
+    border: 2px solid #90a7dc;
+    color: #6075ab;
+    padding: 7px;
+    margin: 6px 0;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+}
+.btn-submit-2{
+    width: calc(100% - 40%);
+    background-color: #d3e0ff; /* สีเขียว */
+    border: 2px solid #90a7dc;
+    color: #6075ab;
+    padding: 7px;
+    margin: 6px 0;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+    width: 90%;
+}
+.btn-submit:hover {
+    background-color: #90a7dc;
+    box-shadow: 0 6px 8px rgba(47, 182, 227, 0.2);
+    color:#fff;   
+}
+.btn-submit-2:hover {
+    background-color: #90a7dc;
+    box-shadow: 0 6px 8px rgba(47, 182, 227, 0.2);
+    color:#fff;   
+}
+.btn-submit-other{
+    width: calc(100% - 40%);
+    background-color: #f4f7ff; /* สีเขียว */
+    border: 2px solid #90a7dc;
+    color: #6075ab;
+    padding: 7px;
+    margin: 6px 0;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+    width: 90%;
+}
+.btn-submit-other:hover {
+    background-color: #90a7dc;
+    box-shadow: 0 6px 8px rgba(47, 182, 227, 0.2);
+    color:#fff;   
+}
+
+.btn-cancel{
+    width: calc(100% - 40%);
+    background-color: #ffd3d3; /* สีเขียว */
+    border: 2px solid #e34747;
+    color: #c30000;
+    padding: 7px;
+    margin: 6px 0;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+}
+.btn-cancel:hover {
+    background-color: #e34747;
+    box-shadow: 0 6px 8px rgba(47, 182, 227, 0.2);
+    color:#fff;   
+}
+.btn-cancel-2{
+    width: calc(100% - 40%);
+    background-color: #ffd3d3; /* สีเขียว */
+    border: 2px solid #e34747;
+    color: #c30000;
+    margin: 6px 0;
+    border-radius: 18px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: "Prompt", sans-serif;
+    font-style: bold;
+    font-weight: 500;
+    width: 90%;
+}
+.btn-cancel-2:hover {
+    background-color:#e34747;
+    box-shadow: 0 6px 8px rgba(47, 182, 227, 0.2);
+    color:#fff;   
+}
+
+.food{
+    background-color:#e6f2ff;
+    width: 90%;
+    height:80px;
+    border-radius: 5px;
+}
+
+.payment-options, .payment-methods {
+    margin: 15px 0;
+
+}
+
+.payment-options label, .payment-methods label {
+    margin-left: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #6075ab;
+
+}
+
+.payment-summary {
+    font-size: 1.2em;
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px 0;
+}
+.pay-sum-p{
+    text-align: left;
+    color: #3d5081;
+    margin:auto;
+}
+
+.qrcode-container {
+    text-align: center;
+    margin: 20px 0;
+    border: 1px solid rgb(209, 214, 229);
+    background-color: #f5f5f5;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 15px;
+    padding: 20px;
+    flex-grow: 1;
+    width: 100%;
+}
+.allrr{
+    flex-grow: 1;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 15px;
+    width: 100%;
+}
+.container-allrr{
+    display: flex;
+    gap: 10px;
+}
+.text-allrr{
+    width:55%; 
+    font-size:20px; 
+    margin:auto;
+    text-align: left;
+    padding: 5px;
+    color: #6075ab;
+}
+.qrcode-image {
+    width: 350px;
+    height: 350px auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.upload-container {
+    margin-top: 20px;
+}
+
+.upload-label {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.upload-input {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.qrcode-preview-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    
+}
+
+#qrCodePreview {
+    max-width: 300px;
+    width: 100%;
+    height: 400px auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 25px;
+}
+
+/* สไตล์ปุ่มอัปโหลด */
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #4CAF50; /* สีพื้นหลังปุ่ม */
+    color: #fff; /* สีของข้อความและไอคอน */
+    padding: 10px 20px;
+    border-radius: 5px; /* มุมปุ่มกลมเล็กน้อย */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s; /* เอฟเฟกต์การเปลี่ยนแปลง */
+}
+
+.upload-btn i {
+    margin-right: 8px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+.upload-btn:hover {
+    background-color: #45a049; /* สีพื้นหลังปุ่มเมื่อ Hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* เอฟเฟกต์เงาเมื่อ Hover */
+}
+
+.upload-btn input[type="file"] {
+    display: none; /* ซ่อน input file จริง */
+}
+/* สไตล์ข้อความสถานะ */
+.file-status {
+    font-size: 1em;
+    color: #FF5722; /* สีข้อความเตือน */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.conf-wrapper-superb {
+    margin: 20px;
+    padding: 30px;
+    background-color: #f5f8ff;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: 'Prompt', sans-serif;
+}
+
+.conf-title-victory {
+    font-size: 2em;
+    color: #6075ab;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* .conf-message-complete {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+    background-color: #4CAF50;
+    padding: 5px 10px;
+    border-radius: 10px;
+    max-width: 100%;
+    width: 100% ;
+    
+} */
+.conf-message-complete {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 300px;
+    width: 80%;
+}
+
+.cst-conf-pending {
+    background-color: #FF9800; /* สีสำหรับรอดำเนินการ */
+}
+
+.cst-conf-deposit {
+    background-color: #2196F3; /* สีสำหรับมัดจำแล้ว */
+}
+
+.cst-conf-paid {
+    background-color: #4CAF50; /* สีสำหรับชำระเงินครบแล้ว */
+}
+
+.conf-info-label {
+    font-size: 1.1em;
+    color: #3a4b7c;
+    margin-bottom: 15px;
+}
+
+.conf-details-list-extra {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.conf-detail-item {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #4a5a85;
+}
+
+.conf-contact-info {
+    font-size: 1em;
+    color: #6075ab;
+    margin-bottom: 20px;
+}
+
+.conf-contact-strong {
+    font-weight: bold;
+    color: #3a4b7c;
+}
+
+.conf-wrapper-superb a.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6075ab;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.conf-wrapper-superb a.btn-primary:hover {
+    background-color: #4a5a85;
+}

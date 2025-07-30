@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(158deg, rgba(184,201,245,0.5) 0%, rgba(181,232,248,0.5) 100%);
+    margin: 0;
+    padding-top: 60px; /* เพื่อเว้นพื้นที่สำหรับ fixed navbar */
+}
+
+.container-sign {
+    max-width: 600px; /* ปรับความกว้างของ container */
+    margin: 20px auto; /* จัดให้ container อยู่ตรงกลาง */
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* เพิ่ม position relative */
+}
+.button-group {
+    position: absolute; /* ใช้ absolute positioning */
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+}
+.button-group button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+.container-sign h2 {
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.container-sign input[type="text"],
+.container-sign input[type="email"],
+.container-sign input[type="password"],
+.container-sign select,
+.container-sign input[type="number"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.1em;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.container-sign button {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 12px 0;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.container-sign button:hover {
+    background-color: #0056b3;
+}
+.container-sign .login-link {
+    margin-top: 30px;
+    color: #007bff;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline;
+}
+.container-sign .login-link:hover {
+    text-decoration: underline;
+}
+.button-group {
+    position: absolute; /* ใช้ absolute positioning */
+    top: 100px; /* ปรับระยะห่างจากด้านบนของฟอร์ม */
+    right: 300px; /* ปรับระยะห่างจากขอบขวาของหน้าจอ */
+    display: flex;
+    flex-direction: column; /* ทำให้ปุ่มเรียงเป็นแนวตั้ง */
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+}
+
+.button-group button {
+    width: 150px; /* กำหนดความกว้างของปุ่ม */
+    padding: 10px 15px;
+    background-color: #90a7dc;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.button-group button:hover {
+    background-color: #a9bbe5;
+    transition: 0.3s;
+}
+
+.form__group {
+    position: relative;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: white; /* เพิ่ม background เพื่อไม่ให้ซ้อนกับ input */
+    padding: 0 5px;
+    border-radius: 10px;
+    color: #717FA1;
+}
+
+.form__input:placeholder-shown + .form__label {
+    transform: translateY(-1%);
+    opacity: 0;
+}
+
+.form__input:not(:placeholder-shown) + .form__label {
+    transform: translateY(-20%);
+    opacity: 1;
+    
+}
+.form__input:focus {
+    border: 1px solid rgb(0, 153, 167) !important; /* สีขอบที่ต้องการ */
+    outline: none; /* ซ่อนเส้นขอบมาตรฐาน */
+    box-shadow: 0 0 2px rgb(56, 168, 190); /* เพิ่มเงาสำหรับความสวยงาม */
+}
+
+
+/* ปรับโค้ดนี้เพื่อซ่อน label จนกว่าจะมีการคลิก */
+.form__select:not(:focus):not(:valid) + .form__label {
+    transform: translateY(-1%);
+    opacity: 0;
+}
+
+.form__select:focus {
+    border: 1px solid rgb(0, 153, 167) !important; /* สีขอบที่ต้องการ */
+    outline: none; /* ซ่อนเส้นขอบมาตรฐาน */
+    box-shadow: 0 0 2px rgb(56, 168, 190); /* เพิ่มเงาสำหรับความสวยงาม */
+    
+}
+.form__select:focus + .form__label,
+.form__select:not([value=""]) + .form__label {
+    transform: translateY(-20%);
+    opacity: 1;
+}
+

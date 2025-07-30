@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(158deg, rgba(184,201,245,0.5) 0%, rgba(181,232,248,0.5) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+.login-container h2 {
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.login-container button:hover {
+    background-color: #0056b3;
+}
+.login-container .create-sign-in {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: #007bff;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.login-container .create-sign-in:hover {
+    background-color: #e2e6ea;
+}
+.login-container .forgot-password {
+    margin-top: 12px;
+    color: #007bff;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.login-container .forgot-password:hover {
+    text-decoration: underline;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    font-size: 1.1em;
+}
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.form__group {
+    position: relative;
+}
+.form__label {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: white; /* เพิ่ม background เพื่อไม่ให้ซ้อนกับ input */
+    padding: 0 5px;
+    border-radius: 10px;
+    color: #717FA1;
+    font-size: 15px;
+}
+
+.form__input:placeholder-shown + .form__label {
+    transform: translateY(-1%);
+    opacity: 0;
+}
+
+.form__input:not(:placeholder-shown) + .form__label {
+    transform: translateY(-20%);
+    opacity: 1;
+    
+}
+.form__input:focus {
+    border: 1px solid rgb(0, 153, 167) !important; /* สีขอบที่ต้องการ */
+    outline: none; /* ซ่อนเส้นขอบมาตรฐาน */
+    box-shadow: 0 0 2px rgb(56, 168, 190); /* เพิ่มเงาสำหรับความสวยงาม */
+}
